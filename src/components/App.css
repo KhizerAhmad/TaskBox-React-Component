@@ -1,0 +1,106 @@
+.app-container {
+  background-color: #2e3748;  
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 700px;
+}
+
+.app-header h1 {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.app-subtitle {
+  font-size: 1.125rem;
+  color: #8f9caf;
+  font-weight: 500;
+}
+
+.app-main {
+  width: 100%;
+  max-width: 700px;
+}
+
+.task-container {
+  margin-bottom: 32px;
+}
+
+.state-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.state-label {
+  font-size: 1rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.state-badge {
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.state-badge.task_inbox {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #1e40af;
+}
+
+.state-badge.task_pinned {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #92400e;
+}
+
+.state-badge.task_archived {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #065f46;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 24px 16px;
+  }
+
+  .app-header {
+    margin-bottom: 32px;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .app-subtitle {
+    font-size: 1rem;
+  }
+
+  .state-indicator {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+  }
+}
